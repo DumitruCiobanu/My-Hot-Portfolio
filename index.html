@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <title>Pure CSS Fire Animation</title>
+  </head>
+  <body>
+    <section id="home">
+      <audio
+        id="myAudio"
+        src="audio/mixkit-catapult-fire-whoosh-1344 (mp3cut.net).wav"
+      ></audio>
+
+      <video
+        id="myVideo"
+        src="video/Pexels Videos 3785.mp4"
+        autoplay
+        muted
+      ></video>
+      <div id="videoEnd" style="display: none"></div>
+
+      <div id="navbar">
+        <a href="#contact">Contact me</a>
+        <a href="#projects">Projects</a>
+        <a href="#home">Home</a>
+        <a href="#home" onclick="playAudioVideo()">Explode!</a>
+      </div>
+
+      <h1>
+        <span>D</span>
+        <span class="golden">I</span>
+        <span>M</span>
+        <span>E</span>
+        <span class="golden">T</span>
+        <span>R</span>
+        <span>I</span>
+        <span>O</span>
+        <span>S</span>
+      </h1>
+
+      <h2 class="webdev">web developer</h2>
+    </section>
+
+    <section id="projects" class="projects-section">
+      <h2 class="projects-section-header">These are some of my projects:</h2>
+
+      <div class="projects-grid">
+        <a
+          href="https://dumitruciobanu.github.io/Matrix-animation/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/matrix.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Matrix CodeRain<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Aim-Training-Game/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/aimgame.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Aim Training Game<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Random-Color-Hover/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/hover.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Random Color Hover<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Reverse-Slider/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/reverseslide.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Reverse Slider<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/ToDoList-Drag-Drop/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/todolist.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Drag&amp;Drop<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/MotoSlide/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/motoslide.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Moto-Slide<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Rings-of-Fire-Animation/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/circles.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Rings of Fire<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Front-End-Challenge/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/keyboard.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Keyboard layout UI<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Hidden-Fruits/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/fruits.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Hidden Fruits<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Lamborghini/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/SuperTrofeo.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Lamborghini<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Text-Fire-Animation/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/flameText.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Burning Text<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Survey-Form/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/surveyForm.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Survey Form<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Random-RGB-Generator/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/rgb.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Random RGB<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Tribute-Page-Pele/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/Pele.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Tribute Page<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Product-Landing-Page/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/prodLandPage.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Product Landing Page<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Technical-Documentation-Page-HTML-/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/html.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Tech Documentation<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Bootstrap-Museum-of-Candy/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/candy.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Bootstrap Webpage<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Responsive-Price-Table/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/priceTable.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>Responsive Price Table<span
+              class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/Score-Keeper/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img class="project-image" src="./images/score.png" alt="project" />
+          <p class="project-title">
+            <span class="code">&lt;</span>Score-Keeper<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+
+        <a
+          href="https://dumitruciobanu.github.io/append-pokemon/"
+          target="_blank"
+          class="project project-tile"
+        >
+          <img
+            class="project-image"
+            src="./images/porkemon.png"
+            alt="project"
+          />
+          <p class="project-title">
+            <span class="code">&lt;</span>append Pokemon<span class="code"
+              >/&gt;</span
+            >
+          </p>
+        </a>
+      </div>
+
+      <a
+        href="https://github.com/DumitruCiobanu"
+        class="btn btn-show-all"
+        target="_blank"
+        >Show all<i class="fas fa-chevron-right"></i
+      ></a>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2>Let's work together!</h2>
+      </div>
+
+      <div class="contact-links">
+        <a href="tel:+373 79533566" class="btn contact-details"
+          ><i class="fas fa-mobile-alt"></i> Call me</a
+        >
+        <a href="mailto:ciobanudumitru1@gmail.com" class="btn contact-details"
+          ><i class="fas fa-at"></i> Send a mail</a
+        >
+        <a
+          href="https://www.linkedin.com/in/dumitru-ciobanu-168757237/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-linkedin"></i> Linkedin</a
+        >
+        <a
+          id="profile-link"
+          href="https://github.com/DumitruCiobanu"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a
+          href="https://www.facebook.com/mrhappy3000/"
+          target="_blank"
+          class="btn contact-details"
+          ><i class="fab fa-facebook-square"></i> Facebook</a
+        >
+      </div>
+
+      <p class="footer-info">
+        **This is a real portfolio. All the projects and contact details given
+        are real.
+      </p>
+
+      <video
+        id="footerVideo"
+        src="video/Pexels Videos 2715412.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
