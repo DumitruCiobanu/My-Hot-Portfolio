@@ -1,29 +1,10 @@
-function playAudioVideo() {
-  var audio = document.getElementById("myAudio");
-  var video = document.getElementById("myVideo");
-  var divToHide = document.getElementById("videoEnd");
+let restartButton = document.querySelector("#explode");
+restartButton.addEventListener("click", playAudioVideo());
 
-  divToHide.style.display = "none";
-  video.style.display = "block";
+function playAudioVideo(event) {
+  var audio = document.getElementById("myAudio");
 
   audio.play();
-  video.play();
-}
-
-let restartButton = document.querySelector("#explode");
-restartButton.addEventListener("click", restartAnimation, false);
-
-function restartAnimation(event) {
-  let aparition = document.querySelector(".webdev");
-  let rotation = document.querySelector(".run-animation");
-
-  aparition.style.animationName = "none";
-  rotation.style.animationName = "none";
-
-  requestAnimationFrame(() => {
-    aparition.style.animationName = "";
-    rotation.style.animationName = "";
-  });
 }
 
 // Removes video after playback

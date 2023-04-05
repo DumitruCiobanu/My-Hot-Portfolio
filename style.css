@@ -142,7 +142,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.run-animation {
+h1 span {
   display: inline-block;
   animation: animate 0.5s linear forwards;
   animation-fill-mode: both;
