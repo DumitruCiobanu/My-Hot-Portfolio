@@ -10,6 +10,22 @@ function playAudioVideo() {
   video.play();
 }
 
+let restartButton = document.querySelector("#explode");
+restartButton.addEventListener("click", restartAnimation, false);
+
+function restartAnimation(event) {
+  let aparition = document.querySelector(".webdev");
+  let rotation = document.querySelector(".run-animation");
+
+  aparition.style.animationName = "none";
+  rotation.style.animationName = "none";
+
+  requestAnimationFrame(() => {
+    aparition.style.animationName = "";
+    rotation.style.animationName = "";
+  });
+}
+
 // Removes video after playback
 document.getElementById("myVideo").addEventListener("ended", myHandler, false);
 function myHandler(e) {

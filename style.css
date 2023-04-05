@@ -26,6 +26,7 @@ body {
   padding: 0;
   background-color: #000;
   color: white;
+  overflow-x: hidden; /* Hide scrollbars */
 }
 
 h2 {
@@ -141,9 +142,10 @@ h1 {
   text-transform: uppercase;
 }
 
-h1 span {
+.run-animation {
   display: inline-block;
   animation: animate 0.5s linear forwards;
+  animation-fill-mode: both;
 }
 
 @keyframes animate {
@@ -210,11 +212,11 @@ h2.webdev {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 60%;
+  top: 65%;
   width: 100%;
   text-align: center;
   color: goldenrod;
-  font-size: 2.2em;
+  font-size: 2em;
   font-family: arial black;
   text-transform: capitalize;
   animation: h2 4s forwards ease-in;
@@ -424,8 +426,8 @@ h2.webdev {
     font-size: 9em;
   }
   h2.webdev {
-    top: 60%;
-    font-size: 3.5em;
+    top: 65%;
+    font-size: 3em;
   }
   .projects-section-header {
     max-width: 45rem;
@@ -511,8 +513,8 @@ h2.webdev {
     font-size: 9em;
   }
   h2.webdev {
-    top: 60%;
-    font-size: 3.5em;
+    top: 65%;
+    font-size: 3em;
   }
   .projects-section-header {
     max-width: 45rem;
@@ -602,8 +604,8 @@ h2.webdev {
     font-size: 8em;
   }
   h2.webdev {
-    top: 60%;
-    font-size: 3em;
+    top: 65%;
+    font-size: 2.5em;
   }
   .projects-section-header {
     max-width: 45rem;
@@ -693,8 +695,8 @@ h2.webdev {
     font-size: 7.5em;
   }
   h2.webdev {
-    top: 60%;
-    font-size: 3em;
+    top: 65%;
+    font-size: 2.5em;
   }
   .projects-section-header {
     max-width: 52rem;
@@ -785,8 +787,8 @@ h2.webdev {
     font-size: 7.5em;
   }
   h2.webdev {
-    top: 60%;
-    font-size: 3em;
+    top: 65%;
+    font-size: 2.5em;
   }
   .projects-section-header {
     max-width: 57rem;
