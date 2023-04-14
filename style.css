@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* box-sizing and font sizing */
@@ -12,7 +13,6 @@
 }
 
 html {
-  box-sizing: border-box;
   /* Set font size for easy rem calculations
    * default document font size = 16px, 1rem = 16px, 100% = 16px
    * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
@@ -24,8 +24,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: white;
+  background-color: black;
   overflow-x: hidden; /* Hide scrollbars */
 }
 
@@ -37,6 +36,11 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   padding: 30px 0 5px 0;
+  color: white;
+}
+
+p {
+  color: white;
 }
 
 a {
@@ -54,13 +58,20 @@ img {
   height: 100vh;
   overflow: hidden;
 }
+#headerVideo {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg); /* Safari and Chrome */
+  -moz-transform: rotateX(180deg); /* Firefox */
+}
 
 #footerVideo {
+  object-fit: cover;
   display: block;
+  width: 100%;
   height: 100vh;
-  transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg); /* Safari and Chrome */
-  -moz-transform: rotateY(180deg); /* Firefox */
 }
 
 video {
@@ -75,10 +86,13 @@ video {
 }
 
 #navbar {
-  overflow: hidden;
   background-color: transparent;
-  animation: navanimation 5s forwards ease-in;
-  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  animation: navanimation 3s forwards ease-in;
 }
 
 @keyframes navanimation {
@@ -122,6 +136,7 @@ video {
   position: fixed;
   top: 0;
   width: 100%;
+  color: transparent;
 }
 
 .sticky a {
@@ -132,7 +147,7 @@ h1 {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 60%;
+  top: 55%;
   transform: translateY(-100%);
   width: 100%;
   text-align: center;
@@ -212,14 +227,14 @@ h2.webdev {
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 65%;
+  top: 60%;
   width: 100%;
   text-align: center;
   color: goldenrod;
   font-size: 2em;
   font-family: arial black;
   text-transform: capitalize;
-  animation: h2 4s forwards ease-in;
+  animation: h2 5s forwards ease-in;
 }
 
 @keyframes h2 {
@@ -239,8 +254,6 @@ h2.webdev {
   background-color: #000000;
   background-image: linear-gradient(180deg, black 33%, #ec9f05 30%, #000000 0%);
 }
-
-
 
 .projects-section-header {
   max-width: 35rem;
@@ -353,7 +366,7 @@ h2.webdev {
 
 .contact-section-header {
   position: absolute;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   width: 100%;
   text-align: center;
   z-index: 100;
@@ -377,9 +390,34 @@ h2.webdev {
   z-index: 100;
 }
 
+.cv {
+  position: absolute;
+  z-index: 100;
+  transform: translateY(-150%);
+}
+
+.cv a {
+  display: block;
+  font-size: 1.1rem;
+  color: gold;
+  font-family: arial black;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px #ffffff;
+}
+
+.cv a:hover {
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 2px 14px rgb(255, 136, 0);
+  transition: color 0.3s ease-out;
+  transform: translateY(5px);
+}
+
 .contact-details {
   font-size: 1.5rem;
-  text-shadow: 2px 2px 35px #ffffff;
+  text-shadow: 2px 2px 25px #ffffff;
   transition: transform 0.3s ease-out;
   transition: color 0.3s ease-out;
   color: gold;
@@ -388,8 +426,8 @@ h2.webdev {
 .contact-details:hover {
   transform: translateY(8px);
   cursor: pointer;
-  color: rgb(26, 26, 26);
-  text-shadow: 2px 2px 10px rgb(255, 30, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 16px rgb(255, 136, 0);
 }
 
 .footer-info {
@@ -425,12 +463,12 @@ h2.webdev {
     font-size: 1.5rem;
   }
   h1 {
-    top: 60%;
+    top: 55%;
     transform: translateY(-100%);
     font-size: 9em;
   }
   h2.webdev {
-    top: 65%;
+    top: 60%;
     font-size: 3em;
   }
   .projects-section-header {
@@ -466,19 +504,26 @@ h2.webdev {
     margin-bottom: 8rem;
   }
   .contact-section-header {
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
   .contact-section-header > h2 {
     font-size: 4rem;
   }
+
+  .cv a {
+    font-size: 1.7rem;
+    transform: translateY(90%);
+  }
+
   .contact-links {
-    transform: translateY(200%);
+    transform: translateY(160%);
   }
   .contact-details {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
+    padding: 15px;
   }
   .footer-info {
-    width: 90rem;
+    width: 70rem;
     padding: 4rem;
     border-top: 3px solid goldenrod;
     transform: translateY(200%);
@@ -489,8 +534,8 @@ h2.webdev {
     margin: 1rem;
   }
   #footerVideo {
+    display: block;
     height: 100vh;
-    overflow: hidden;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg); /* Safari and Chrome */
     -moz-transform: rotateY(180deg); /* Firefox */
@@ -512,12 +557,12 @@ h2.webdev {
     font-size: 1.8rem;
   }
   h1 {
-    top: 60%;
+    top: 55%;
     transform: translateY(-100%);
     font-size: 9em;
   }
   h2.webdev {
-    top: 65%;
+    top: 60%;
     font-size: 3em;
   }
   .projects-section-header {
@@ -553,19 +598,28 @@ h2.webdev {
     margin-bottom: 8rem;
   }
   .contact-section-header {
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
   .contact-section-header > h2 {
     font-size: 4rem;
   }
+
+  .cv a {
+    font-size: 1.8rem;
+    padding: 15px;
+    transform: translateY(120%);
+  }
+
   .contact-links {
     transform: translateY(200%);
   }
   .contact-details {
-    font-size: 1.8rem;
+    font-size: 2.7rem;
+    margin-bottom: -10px;
+    padding: 10px;
   }
   .footer-info {
-    width: 90rem;
+    width: 70rem;
     padding: 4rem;
     border-top: 3px solid goldenrod;
     transform: translateY(200%);
@@ -576,8 +630,8 @@ h2.webdev {
     margin: 1rem;
   }
   #footerVideo {
+    display: block;
     height: 100vh;
-    overflow: hidden;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg); /* Safari and Chrome */
     -moz-transform: rotateY(180deg); /* Firefox */
@@ -603,12 +657,12 @@ h2.webdev {
     font-size: 2rem;
   }
   h1 {
-    top: 60%;
+    top: 45%;
     transform: translateY(-100%);
     font-size: 8em;
   }
   h2.webdev {
-    top: 65%;
+    top: 50%;
     font-size: 2.5em;
   }
   .projects-section-header {
@@ -644,19 +698,25 @@ h2.webdev {
     margin-bottom: 8rem;
   }
   .contact-section-header {
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
   .contact-section-header > h2 {
     font-size: 4rem;
   }
+
+  .cv a {
+    font-size: 1.9rem;
+  }
+
   .contact-links {
     transform: translateY(190%);
   }
   .contact-details {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
+    padding: 10px;
   }
   .footer-info {
-    width: 80rem;
+    width: 60rem;
     padding: 4rem;
     border-top: 3px solid goldenrod;
     transform: translateY(190%);
@@ -667,8 +727,8 @@ h2.webdev {
     margin: 1rem;
   }
   #footerVideo {
+    display: block;
     height: 100vh;
-    overflow: hidden;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg); /* Safari and Chrome */
     -moz-transform: rotateY(180deg); /* Firefox */
@@ -694,12 +754,12 @@ h2.webdev {
     font-size: 2rem;
   }
   h1 {
-    top: 60%;
+    top: 45%;
     transform: translateY(-100%);
     font-size: 7.5em;
   }
   h2.webdev {
-    top: 65%;
+    top: 50%;
     font-size: 2.5em;
   }
   .projects-section-header {
@@ -735,20 +795,27 @@ h2.webdev {
     margin-bottom: 8rem;
   }
   .contact-section-header {
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
   .contact-section-header > h2 {
     font-size: 4rem;
     margin-bottom: 4rem;
   }
+
+  .cv a {
+    font-size: 2.4rem;
+    transform: translateY(90%);
+  }
+
   .contact-links {
     transform: translateY(70%);
   }
   .contact-details {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    padding: 10px;
   }
   .footer-info {
-    width: 70rem;
+    width: 50rem;
     padding: 5rem;
     border-top: 3px solid goldenrod;
     transform: translateY(190%);
@@ -759,8 +826,8 @@ h2.webdev {
     margin: 1rem;
   }
   #footerVideo {
+    display: block;
     height: 100vh;
-    overflow: hidden;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg); /* Safari and Chrome */
     -moz-transform: rotateY(180deg); /* Firefox */
@@ -786,12 +853,12 @@ h2.webdev {
     font-size: 1.7rem;
   }
   h1 {
-    top: 60%;
+    top: 45%;
     transform: translateY(-100%);
     font-size: 7.5em;
   }
   h2.webdev {
-    top: 65%;
+    top: 50%;
     font-size: 2.5em;
   }
   .projects-section-header {
@@ -833,19 +900,26 @@ h2.webdev {
     margin-bottom: 8rem;
   }
   .contact-section-header {
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
   .contact-section-header > h2 {
     font-size: 4rem;
   }
+
+  .cv a {
+    font-size: 2.6rem;
+    transform: translateY(100%);
+  }
+
   .contact-links {
     transform: translateY(90%);
   }
   .contact-details {
-    font-size: 3rem;
+    font-size: 3.6rem;
+    padding: 10px;
   }
   .footer-info {
-    width: 70rem;
+    width: 40rem;
     padding: 5rem;
     border-top: 3px solid goldenrod;
     transform: translateY(230%);
@@ -856,8 +930,8 @@ h2.webdev {
     margin: 1rem;
   }
   #footerVideo {
+    display: block;
     height: 100vh;
-    overflow: hidden;
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg); /* Safari and Chrome */
     -moz-transform: rotateY(180deg); /* Firefox */
